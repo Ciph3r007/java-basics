@@ -1,4 +1,4 @@
-package com.ciph3r;
+package com.ciph3r.generics;
 
 public class Utils {
   public static <T extends Comparable<T>> T max(T first, T second) {

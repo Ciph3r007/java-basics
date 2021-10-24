@@ -1,9 +1,32 @@
 package com.ciph3r;
 
-import java.util.Collections;
+import com.ciph3r.generics.*;
+import com.ciph3r.oop.*;
 
 public class Main {
     public static void main(String[] args) {
+        //oopDemo();
+        genericsDemo();
+    }
+
+    public static void oopDemo() {
+        var point1 = new Point(1, 2);
+        var point2 = new Point(1, 2);
+        var point3 = new Point(1, 3);
+        System.out.println(point1.equals(point2));
+        System.out.println(point1.equals(point3));
+
+
+        var textbox = new TextBox();
+        textbox.setText("Call me box");
+        System.out.println(textbox);
+
+        UIControl[] controls = { new TextBox(), new CheckBox() };
+        for (var control : controls)
+            control.render();
+    }
+
+    public static void genericsDemo(){
         // Using object class for list
         var items = new List();
         items.add("some string");

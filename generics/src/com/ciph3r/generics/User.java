@@ -1,4 +1,4 @@
-package com.ciph3r;
+package com.ciph3r.generics;
 
 public class User implements Comparable<User> {
   private int points;

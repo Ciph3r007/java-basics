@@ -1,8 +1,8 @@
-package com.ciph3r;
+package com.ciph3r.generics;
 
 import java.util.Iterator;
 
-// Template T can inherit for constraints; i.e. <T extends Comparable & Cloneable>
+// Template T can inherit to add constraints; i.e. <T extends Comparable & Cloneable>
 public class GenericList<T> implements Iterable<T> {
   private T[] items = (T[]) new Object[10];
   private int count;

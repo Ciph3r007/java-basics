@@ -1,4 +1,4 @@
-package com.ciph3r;
+package com.ciph3r.generics;
 
 public class List {
   private Object[] items = new Object[10];
