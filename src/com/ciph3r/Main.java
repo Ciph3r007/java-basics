@@ -1,12 +1,19 @@
 package com.ciph3r;
 
+import com.ciph3r.collections.Customer;
+import com.ciph3r.collections.EmailComparator;
 import com.ciph3r.generics.*;
 import com.ciph3r.oop.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         //oopDemo();
-        genericsDemo();
+        //genericsDemo();
+        collectionsDemo();
     }
 
     public static void oopDemo() {
@@ -28,7 +35,7 @@ public class Main {
 
     public static void genericsDemo(){
         // Using object class for list
-        var items = new List();
+        var items = new NonGenericList();
         items.add("some string");
         items.add(123);
         items.add(new User(10));
@@ -57,5 +64,20 @@ public class Main {
         System.out.println("\nGeneric methods in non-generic class");
         System.out.println(Utils.max(users.get(0), users.get(2)));
         Utils.print("userCount", 3);
+    }
+
+    public static void collectionsDemo() {
+        List<Customer> customers = new ArrayList<>();
+        var c1 = new Customer("a", "e2");
+        var c2 = new Customer("c", "e3");
+        var c3 = new Customer("b", "e1");
+
+        Collections.addAll(customers, c1, c2 ,c3);
+
+        System.out.println(customers);
+        Collections.sort(customers);
+        System.out.println(customers);
+        Collections.sort(customers, new EmailComparator());
+        System.out.println(customers);
     }
 }

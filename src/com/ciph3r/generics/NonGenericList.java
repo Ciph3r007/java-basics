@@ -1,6 +1,6 @@
 package com.ciph3r.generics;
 
-public class List {
+public class NonGenericList {
   private Object[] items = new Object[10];
   private int count;
 
